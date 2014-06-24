@@ -53,6 +53,8 @@
 	
 	<option value="//api/name/assetsPickerController:didUnhighlightAsset:">&nbsp;&nbsp;&nbsp;&nbsp;- assetsPickerController:didUnhighlightAsset:</option>
 	
+	<option value="//api/name/assetsPickerController:isDefaultAssetsGroup:">&nbsp;&nbsp;&nbsp;&nbsp;- assetsPickerController:isDefaultAssetsGroup:</option>
+	
 	<option value="//api/name/assetsPickerController:shouldDeselectAsset:">&nbsp;&nbsp;&nbsp;&nbsp;- assetsPickerController:shouldDeselectAsset:</option>
 	
 	<option value="//api/name/assetsPickerController:shouldEnableAsset:">&nbsp;&nbsp;&nbsp;&nbsp;- assetsPickerController:shouldEnableAsset:</option>
@@ -60,6 +62,8 @@
 	<option value="//api/name/assetsPickerController:shouldHighlightAsset:">&nbsp;&nbsp;&nbsp;&nbsp;- assetsPickerController:shouldHighlightAsset:</option>
 	
 	<option value="//api/name/assetsPickerController:shouldSelectAsset:">&nbsp;&nbsp;&nbsp;&nbsp;- assetsPickerController:shouldSelectAsset:</option>
+	
+	<option value="//api/name/assetsPickerController:shouldShowAsset:">&nbsp;&nbsp;&nbsp;&nbsp;- assetsPickerController:shouldShowAsset:</option>
 	
 	<option value="//api/name/assetsPickerController:shouldShowAssetsGroup:">&nbsp;&nbsp;&nbsp;&nbsp;- assetsPickerController:shouldShowAssetsGroup:</option>
 	
@@ -85,7 +89,9 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Enabling Assets Group">Enabling Assets Group</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Enabling Assets for Selection">Enabling Assets for Selection</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Showing Content of Default Assets Group">Showing Content of Default Assets Group</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Enabling Assets">Enabling Assets</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Managing the Selected Assets">Managing the Selected Assets</a></span></li>
 	
@@ -113,6 +119,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/assetsPickerController:didUnhighlightAsset:">assetsPickerController:didUnhighlightAsset:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/assetsPickerController:isDefaultAssetsGroup:">assetsPickerController:isDefaultAssetsGroup:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/assetsPickerController:shouldDeselectAsset:">assetsPickerController:shouldDeselectAsset:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/assetsPickerController:shouldEnableAsset:">assetsPickerController:shouldEnableAsset:</a></span></li>
@@ -120,6 +128,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/assetsPickerController:shouldHighlightAsset:">assetsPickerController:shouldHighlightAsset:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/assetsPickerController:shouldSelectAsset:">assetsPickerController:shouldSelectAsset:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/assetsPickerController:shouldShowAsset:">assetsPickerController:shouldShowAsset:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/assetsPickerController:shouldShowAssetsGroup:">assetsPickerController:shouldShowAssetsGroup:</a></span></li>
 	
@@ -218,11 +228,31 @@ It returns an <code>ALAssetRepresentation</code> object which encapsulates one o
 						</ul>
 						
 						
-						<a title="Enabling Assets for Selection" name="task_Enabling Assets for Selection"></a>
-						<h3 class="subsubtitle task-title">Enabling Assets for Selection</h3>
+						<a title="Showing Content of Default Assets Group" name="task_Showing Content of Default Assets Group"></a>
+						<h3 class="subsubtitle task-title">Showing Content of Default Assets Group</h3>
 
 						<ul class="task-list">
 							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/assetsPickerController:isDefaultAssetsGroup:">&ndash;&nbsp;assetsPickerController:isDefaultAssetsGroup:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Enabling Assets" name="task_Enabling Assets"></a>
+						<h3 class="subsubtitle task-title">Enabling Assets</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/assetsPickerController:shouldShowAsset:">&ndash;&nbsp;assetsPickerController:shouldShowAsset:</a></code>
+	</span>
+	
+	
+</li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/assetsPickerController:shouldEnableAsset:">&ndash;&nbsp;assetsPickerController:shouldEnableAsset:</a></code>
 	</span>
@@ -559,6 +589,68 @@ It returns an <code>ALAssetRepresentation</code> object which encapsulates one o
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/assetsPickerController:isDefaultAssetsGroup:" title="assetsPickerController:isDefaultAssetsGroup:"></a>
+	<h3 class="subsubtitle method-title">assetsPickerController:isDefaultAssetsGroup:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Ask the delegate if the specified assets group is the default assets group.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)assetsPickerController:(CTAssetsPickerController *)<em>picker</em> isDefaultAssetsGroup:(ALAssetsGroup *)<em>group</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>picker</em></dt>
+			<dd><p>The controller object managing the assets picker interface.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>group</em></dt>
+			<dd><p>The assets group to be process.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><code>YES</code> if the assets group is the default assets group or <code>NO</code> if it is not.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The picker initially shows the content of default assets group instead of a list of albums. By default,
+there are no default assets groups.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CTAssetsPickerController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/assetsPickerController:shouldDeselectAsset:" title="assetsPickerController:shouldDeselectAsset:"></a>
 	<h3 class="subsubtitle method-title">assetsPickerController:shouldDeselectAsset:</h3>
 	
@@ -783,6 +875,62 @@ It returns an <code>ALAssetRepresentation</code> object which encapsulates one o
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/assetsPickerController:shouldShowAsset:" title="assetsPickerController:shouldShowAsset:"></a>
+	<h3 class="subsubtitle method-title">assetsPickerController:shouldShowAsset:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Ask the delegate if the specified asset shoule be shown.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)assetsPickerController:(CTAssetsPickerController *)<em>picker</em> shouldShowAsset:(ALAsset *)<em>asset</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>picker</em></dt>
+			<dd><p>The controller object managing the assets picker interface.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>asset</em></dt>
+			<dd><p>The asset to be shown.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><code>YES</code> if the asset should be shown or <code>NO</code> if it should not.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CTAssetsPickerController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/assetsPickerController:shouldShowAssetsGroup:" title="assetsPickerController:shouldShowAssetsGroup:"></a>
 	<h3 class="subsubtitle method-title">assetsPickerController:shouldShowAssetsGroup:</h3>
 	
@@ -899,7 +1047,7 @@ It returns an <code>ALAssetRepresentation</code> object which encapsulates one o
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Clement T. All rights reserved. (Last updated: 2014-03-19)</span><br />
+						<p><span class="copyright">&copy; 2014 Clement T. All rights reserved. (Last updated: 2014-06-24)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						
