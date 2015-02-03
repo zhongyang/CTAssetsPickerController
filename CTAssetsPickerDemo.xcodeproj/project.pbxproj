@@ -102,6 +102,8 @@
 		ADFDE19B19357D38004752B5 /* ALAsset+accessibilityLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "ALAsset+accessibilityLabel.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		ADFDE1A01935857F004752B5 /* NSDateFormatter+timeIntervalFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+timeIntervalFormatter.h"; sourceTree = "<group>"; };
 		ADFDE1A11935857F004752B5 /* NSDateFormatter+timeIntervalFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSDateFormatter+timeIntervalFormatter.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		F3226E921A80D52300F905B7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		F3226E931A80D52900F905B7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/CTAssetsPickerController.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +263,7 @@
 				en,
 				Base,
 				"zh-Hant",
+				"zh-Hans",
 			);
 			mainGroup = ADE31D7D17EFF08C008958B8;
 			productRefGroup = ADE31D8717EFF08C008958B8 /* Products */;
@@ -339,6 +342,7 @@
 			children = (
 				AD68F6981A09FA5700097018 /* en */,
 				AD68F69A1A09FA6100097018 /* zh-Hant */,
+				F3226E931A80D52900F905B7 /* zh-Hans */,
 			);
 			name = CTAssetsPickerController.strings;
 			sourceTree = "<group>";
@@ -347,6 +351,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				ADE31D9317EFF08C008958B8 /* en */,
+				F3226E921A80D52300F905B7 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
