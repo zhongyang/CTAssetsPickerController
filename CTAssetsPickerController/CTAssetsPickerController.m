@@ -189,7 +189,7 @@ NSString * const CTAssetsPickerSelectedAssetsChangedNotification = @"CTAssetsPic
     BOOL enabled = (self.alwaysEnableDoneButton) ? YES : (self.selectedAssets.count > 0);
     
     for (UIViewController *viewController in nav.viewControllers)
-        viewController.navigationItem.rightBarButtonItem.enabled = (self.selectedAssets.count >= 0);
+        viewController.navigationItem.rightBarButtonItem.enabled = enabled;
 }
 
 
